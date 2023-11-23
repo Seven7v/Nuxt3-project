@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devServer: {
     host: '0.0.0.0',
     port: 3000
-    },
+  },
   //   页面过度
   app: {
     pageTransition: { name: 'app', mode: 'out-in' },
@@ -26,13 +26,14 @@ export default defineNuxtConfig({
   ],
   // 反向代理
   nitro: {
-    devProxy: {
-      '/api': {
-        target: 'https://i.maoyan.com/api', // 这里是接口地址
-        changeOrigin: true,
-        prependPath: true
-      }
-    }
+    // 如果使用nuxt3实现接口 配置名称为api会和默认冲突。 改为别的名称
+    // devProxy: {
+    //   '/maoyan': {
+    //     target: 'https://i.maoyan.com', // 这里是接口地址
+    //     changeOrigin: true,
+    //     prependPath: true
+    //   }
+    // }
     // 该配置用于服务端请求转发 -- 这里使用时首屏加载不发请求 前端代理成功 后台代理失败。不理解
     // routeRules: {
     //   '/api/**': {

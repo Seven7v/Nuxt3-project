@@ -28,3 +28,22 @@ Start the development server on `http://localhost:3000`:
 ![Image text](https://github.com/Seven7v/Nuxt3-vue3-project/blob/main/assets/img/4faee223e501eefc2f2f88e328bb41e.png)
 
 ![Image text](https://github.com/Seven7v/Nuxt3-vue3-project/blob/main/assets/img/b011a3226a598819635dcb76deb62c7.png)
+
+## build
+
+有关于 nuxt3 部署 一定需要部署在 node 环境下运行。
+
+```
+npm run build
+
+// 最后会提示
+✔ You can preview this build using node .output/server/index.mjs
+```
+
+可以找到`.output/server/index.mjs` 直接 运行
+
+```
+node .output/server/index.mjs
+```
+
+这样就会默认在本地生成一个 3000 端口的服务器包含了项目全部内容
